@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Studio</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+    <!--Шапка страницы-->
+    <header> 
+
+        <!--Главная навигация сайта-->        
+        <nav>
+            <a href="./index.html" class=logo><span>Web</span>Studio</a>
+
+            <ul>
+                <li><a href="./index.html" class="navigation">Студия</a></li>
+                <li><a href="./portfolio.html" class="navigation current">Портфолио</a></li>
+                <li><a href="" class="navigation">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <!--Контакты-->
+        <ul>
+            <!--Email кампании-->
+            <li>
+                <address>
+                    <a href="mailto:info@devstudio.com" class="navigation contacts">info@devstudio.com</a>
+                </address>
+            </li>
+            <!--Телефон кампании-->
+            <li>
+                <address>
+                    <a href="tel:+380961111111" class="navigation contacts">+38 096 111 11 11</a>
+                </address>
+            </li>
+        </ul>
+    </header>
+    <!--Основной контент страницы-->
+    <main>
+        <section class="portfolio">
+            <!--Фильтры-->
+            <ul class="filter">
+                <li>
+                    <button type="button" class="filter-button active">Все</button>
+                </li>
+                <li>
+                    <button type="button" class="filter-button">Веб-сайты</button>
+                </li>
+                <li>
+                    <button type="button" class="filter-button">Приложения</button>
+                </li>
+                <li>
+                    <button type="button" class="filter-button">Дизайн</button>
+                </li>
+                <li>
+                    <button type="button" class="filter-button">Маркетинг</button>
+                </li>
+            </ul>
+            <!--Проекты-->
+            <ul class="projects">
+                <li class="project">
+                    <img src="./images/portfolio1.jpg" alt="Технокряк фото" width="370" height="294">
+                    <h3 class="project-title">Технокряк</h3>
+                    <p class="project-type">Веб-сайт</p>
+                </li>
+
+                <li class="project">
+                    <img src="./images/portfolio2.jpg" alt="Постер New Orlean vs Golden Star фото" width="370" height="294">
+                    <h3 class="project-title">Постер New Orlean vs Golden Star</h3>
+                    <p class="project-type"></p>
+                </li>
+
+                <li class="project">
+                    <img src="./images/portfolio3.jpg" alt="Ресторан Seafood фото" width="370" height="294">
+                    <h3 class="project-title">Ресторан Seafood</h3>
+                    <p class="project-type">Приложение</p>
+                </li>
+
+                <li class="project">
+                    <img src="./images/portfolio4.jpg" alt="Проект Prime фото" width="370" height="294">
+                    <h3 class="project-title">Проект Prime</h3>
+                    <p class="project-type">Маркетинг</p>
+                </li>
+
+                <li class="project">
+                    <img src="./images/portfolio5.jpg" alt="Проект Boxes фото" width="370" height="294">
+                    <h3 class="project-title">Проект Boxes</h3>
+                    <p class="project-type">Приложение</p>
+                </li>
+
+                <li class="project">
+                    <img src="./images/portfolio6.jpg" alt="Inspiration has no Borders фото" width="370" height="294">
+                    <h3 class="project-title">Inspiration has no Borders</h3>
+                    <p class="project-type">Веб-сайт</p>
+                </li>
+
+                <li class="project">
+                    <img src="./images/portfolio7.jpg" alt="Издание Limited Edition фото" width="370" height="294">
+                    <h3 class="project-title">Издание Limited Edition</h3>
+                    <p class="project-type">Дизайн</p>
+                </li>
+
+                <li class="project">
+                    <img src="./images/portfolio8.jpg" alt="Проект LAB фото" width="370" height="294">
+                    <h3 class="project-title">Проект LAB</h3>
+                    <p class="project-type">Маркетинг</p>
+                </li>
+
+                <li class="project">
+                    <img src="./images/portfolio9.jpg" alt="Growing Business фото" width="370" height="294">
+                    <h3 class="project-title">Growing Business</h3>
+                    <p class="project-type">Приложение</p>
+                </li>
+            </ul>
+
+        </section>    
+    </main>
+    <!--Подвал страницы-->
+    <footer class="footer">
+        <a href="./index.html" class="logo"><span>Web</span>Studio</a>
+
+        <!--Контактные данные кампании-->
+        <ul>
+            <li>
+                <!--Адрес кампании-->
+                <address class="company-addr">
+                    г. Киев, пр-т Леси Украинки, 26
+                </address>
+            </li>   
+            <!--Email кампании-->
+            <li>
+                <address>
+                    <a href="mailto:info@devstudio.com"  class="email">info@devstudio.com</a>
+                </address>
+            </li>
+            <!--Телефон кампании-->
+            <li>
+                <address>
+                    <a href="tel:+380961111111" class="telephone">+38 096 111 11 11</a>
+                </address>
+            </li>
+        </ul>   
+    </footer>
+</body>
+</html>
