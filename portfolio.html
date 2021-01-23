@@ -6,8 +6,11 @@
     <title>Web Studio</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+                integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+                crossorigin="anonymous" />
+
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
@@ -15,35 +18,35 @@
     <header> 
 
         <!--Главная навигация сайта-->        
-        <nav>
+        <nav class="container main-nav">
             <a href="./index.html" class=logo><span>Web</span>Studio</a>
 
-            <ul>
+            <ul  class="pages-nav">
                 <li><a href="./index.html" class="navigation">Студия</a></li>
                 <li><a href="./portfolio.html" class="navigation current">Портфолио</a></li>
                 <li><a href="" class="navigation">Контакты</a></li>
             </ul>
-        </nav>
 
         <!--Контакты-->
-        <ul>
-            <!--Email кампании-->
-            <li>
-                <address>
-                    <a href="mailto:info@devstudio.com" class="navigation contacts">info@devstudio.com</a>
-                </address>
-            </li>
-            <!--Телефон кампании-->
-            <li>
-                <address>
-                    <a href="tel:+380961111111" class="navigation contacts">+38 096 111 11 11</a>
-                </address>
-            </li>
-        </ul>
+            <ul class="address-nav">
+                <!--Email кампании-->
+                <li>
+                    <address>
+                        <a href="mailto:info@devstudio.com" class="navigation contacts">info@devstudio.com</a>
+                    </address>
+                </li>
+                <!--Телефон кампании-->
+                <li>
+                    <address>
+                        <a href="tel:+380961111111" class="navigation contacts">+38 096 111 11 11</a>
+                    </address>
+                </li>
+            </ul>
+        </nav>
     </header>
     <!--Основной контент страницы-->
     <main>
-        <section class="portfolio">
+        <section class="portfolio container">
             <!--Фильтры-->
             <ul class="filter">
                 <li>
@@ -73,7 +76,7 @@
                 <li class="project">
                     <img src="./images/portfolio2.jpg" alt="Постер New Orlean vs Golden Star фото" width="370" height="294">
                     <h3 class="project-title">Постер New Orlean vs Golden Star</h3>
-                    <p class="project-type"></p>
+                    <p class="project-type">Дизайн</p>
                 </li>
 
                 <li class="project">
@@ -123,29 +126,31 @@
     </main>
     <!--Подвал страницы-->
     <footer class="footer">
+        <div class="container">
         <a href="./index.html" class="logo"><span>Web</span>Studio</a>
 
-        <!--Контактные данные кампании-->
-        <ul>
-            <li>
-                <!--Адрес кампании-->
-                <address class="company-addr">
-                    г. Киев, пр-т Леси Украинки, 26
-                </address>
-            </li>   
-            <!--Email кампании-->
-            <li>
-                <address>
-                    <a href="mailto:info@devstudio.com"  class="email">info@devstudio.com</a>
-                </address>
-            </li>
-            <!--Телефон кампании-->
-            <li>
-                <address>
-                    <a href="tel:+380961111111" class="telephone">+38 096 111 11 11</a>
-                </address>
-            </li>
-        </ul>   
+            <!--Контактные данные кампании-->
+            <ul>
+                <li>
+                    <!--Адрес кампании-->
+                    <address class="company-addr">
+                        г. Киев, пр-т Леси Украинки, 26
+                    </address>
+                </li>   
+                <!--Email кампании-->
+                <li>
+                    <address>
+                        <a href="mailto:info@devstudio.com"  class="email">info@devstudio.com</a>
+                    </address>
+                </li>
+                <!--Телефон кампании-->
+                <li>
+                    <address>
+                        <a href="tel:+380961111111" class="telephone">+38 096 111 11 11</a>
+                    </address>
+                </li>
+            </ul>  
+        </div> 
     </footer>
 </body>
 </html>

@@ -51,9 +51,64 @@ address {
 
 ul {
   list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+  padding: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: tomato;
+  outline: 2px solid tomato;*/
+}
+
+.section-title {
+  margin-bottom: 50px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 /*Шапка страницы*/
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.pages-nav,
+.address-nav {
+  display: flex;
+}
+
+.address-nav li:not(:last-child),
+.pages-nav li:not(:last-child) {
+  padding-right: 50px;
+}
+
+.address-nav {
+  margin-left: auto;
+}
+
 .logo {
+  margin-right: 93px;
   font-family: Raleway, sans-serif;
   color: var(--logo-color);
   font-weight: 700;
@@ -84,14 +139,6 @@ ul {
 .contacts {
   color: var(--secondary-text-color);
 }
-/*INDEX Main*/
-
-.section-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
 
 /*Hero секция*/
 .hero {
@@ -101,7 +148,19 @@ ul {
   letter-spacing: 0.06em;
 }
 
+.hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .hero-title {
+  width: 696px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -109,17 +168,43 @@ ul {
 }
 
 .hero-button {
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-white-color);
   background-color: var(--accent-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
+
 /*Ocoбенности*/
+.features ul {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features-item {
+  width: 270px;
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features h2 {
+  display: none;
+}
+
 .features-title {
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.15;
   text-transform: uppercase;
 }
 
@@ -131,23 +216,54 @@ ul {
 }
 
 /*Чем мы занимаемся*/
-/*.dir-item {
+.directions {
+  display: flex;
+  justify-content: space-between;
+}
 
-}*/
+.directions li {
+  font-size: 0;
+}
+
+/*
+.dir-item {
+
+}
+*/
 
 /*Наша команда*/
 
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--light-background);
+}
+
+.team-players {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-player img {
+  display: block;
+}
+
 .team-player {
+  width: 270px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  background-color: var(--white-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/*.team-name{
-
-} */
+.team-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 
 .team-position {
+  margin-bottom: 30px;
   font-weight: normal;
   color: var(--secondary-text-color);
 }
@@ -161,7 +277,18 @@ ul {
   line-height: 1.71;
 }
 
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .container ul li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer .logo {
+  display: block;
+  margin-bottom: 20px;
   color: var(--primary-white-color);
 }
 
@@ -175,15 +302,29 @@ ul {
 }
 
 /*Портфолио MAIN*/
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .filter {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
   text-align: center;
 }
 
 .filter-button {
+  padding: 6px 22px;
   font-size: 16px;
   line-height: 1.62;
   background-color: var(--light-background);
+  border-radius: 4px;
+  border-color: transparent;
+}
+
+.filter li:not(:last-child) {
+  margin-right: 8px;
 }
 
 .filter-button.active {
@@ -197,7 +338,28 @@ ul {
   background-color: yellow;
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  border: 1px solid #eeeeee;
+}
+
+.project:not(:nth-child(3n)) {
+  margin-right: 27px;
+}
+
+.project:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
 .project-title {
+  margin-bottom: 4px;
+  margin-top: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -205,6 +367,9 @@ ul {
 }
 
 .project-type {
+  margin-bottom: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
