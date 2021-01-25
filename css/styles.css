@@ -182,10 +182,13 @@ p {
 }
 
 /*Ocoбенности*/
-.features ul {
-  display: flex;
+.features {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.features ul {
+  display: flex;
 }
 
 .features-item {
@@ -271,18 +274,15 @@ p {
 /*Подвал страницы*/
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--dark-background);
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.footer .container ul li:not(:last-child) {
+.footer li:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -305,6 +305,7 @@ p {
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
+  border-top: 1px solid #ececec;
 }
 
 .filter {
@@ -355,11 +356,12 @@ p {
   margin-bottom: 30px;
 }
 
+.project-info {
+  margin: 20px 24px;
+}
+
 .project-title {
   margin-bottom: 4px;
-  margin-top: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -367,9 +369,6 @@ p {
 }
 
 .project-type {
-  margin-bottom: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
