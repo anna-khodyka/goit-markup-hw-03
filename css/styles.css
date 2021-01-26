@@ -31,6 +31,10 @@ font-family: Roboto;
   --dark-background: #2f303a;
   --light-background: #f5f4fa;
   --accent-background: #2196f3;
+
+  /*Количество столбцов карточек проектов в ПОРТФОЛИО*/
+  --project-column: 3;
+  --project-gap: 30px;
 }
 
 /*Общие стили*/
@@ -67,6 +71,12 @@ p {
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -85,7 +95,18 @@ p {
   text-align: center;
 }
 
+.features,
+.team,
+.directions,
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /*Шапка страницы*/
+
+header {
+  border-bottom: 1px solid #ececec;
+}
 
 .main-nav {
   display: flex;
@@ -142,15 +163,13 @@ p {
 
 /*Hero секция*/
 .hero {
+  height: 600px;
+  padding-top: 200px;
   background-color: var(--dark-background);
+  /*background-image: url("../images/hero-img.jpg");*/
   color: var(--primary-white-color);
   text-align: center;
   letter-spacing: 0.06em;
-}
-
-.hero .container {
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -179,12 +198,6 @@ p {
   background-color: var(--accent-background);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
-
-/*Ocoбенности*/
-.features {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .features ul {
@@ -220,11 +233,15 @@ p {
 
 /*Чем мы занимаемся*/
 .directions {
+  padding-top: 0px;
+}
+
+.dir-items {
   display: flex;
   justify-content: space-between;
 }
 
-.directions li {
+.dir-items li {
   font-size: 0;
 }
 
@@ -237,8 +254,8 @@ p {
 /*Наша команда*/
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  /*padding-top: 94px;
+  padding-bottom: 94px;*/
   background-color: var(--light-background);
 }
 
@@ -301,12 +318,9 @@ p {
   color: var(--adress-color);
 }
 
-/*Портфолио MAIN*/
-.portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  border-top: 1px solid #ececec;
-}
+/*ПОРТФОЛИО*/
+
+/*Фильтры портфолио*/
 
 .filter {
   display: flex;
@@ -339,25 +353,31 @@ p {
   background-color: yellow;
 }
 
+/*Краточки проектов*/
 .projects {
   display: flex;
   flex-wrap: wrap;
+  margin-right: calc(-1 * var(--project-gap));
+  margin-bottom: calc(-1 * var(--project-gap));
 }
 
 .project {
-  border: 1px solid #eeeeee;
-}
+  flex-basis: calc(100% / var(--project-column) - var(--project-gap));
+  margin-right: var(--project-gap);
+  margin-bottom: var(--project-gap);
 
-.project:not(:nth-child(3n)) {
-  margin-right: 27px;
-}
-
-.project:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  overflow: hidden;
 }
 
 .project-info {
-  margin: 20px 24px;
+  padding: 20px 23px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .project-title {
