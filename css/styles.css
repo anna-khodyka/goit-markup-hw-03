@@ -163,12 +163,27 @@ header {
 
 /*Hero секция*/
 .hero {
-  height: 600px;
-  padding-top: 200px;
-  background-color: var(--dark-background);
-  /*background-image: url("../images/hero-img.jpg");*/
-  color: var(--primary-white-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+
+  height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: var(--dark-background);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-img.jpg");
+  background-position: center;
+  background-size: cover;
+
+  color: var(--primary-white-color);
   letter-spacing: 0.06em;
 }
 
@@ -196,8 +211,13 @@ header {
   line-height: 1.87;
   color: var(--primary-white-color);
   background-color: var(--accent-background);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);*/
   border-radius: 4px;
+}
+
+.hero-button:focus,
+.hero-button:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .features ul {
